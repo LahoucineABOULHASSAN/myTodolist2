@@ -103,7 +103,6 @@ main#main-content {
   border-radius: 5px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  margin-bottom: 1rem;
 }
 main#main-content h1 {
   margin-bottom: 2rem;
@@ -155,7 +154,20 @@ main#main-content ul li:nth-child(even):hover {
   border: 1px solid #ec4d37;
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 460px) {
+  body {
+    overflow: auto;
+  }
+
+  input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  .main-container {
+    width: 100%;
+  }
+
   header#main-header {
     padding: 0.5rem;
   }
@@ -163,6 +175,9 @@ main#main-content ul li:nth-child(even):hover {
     width: 100%;
     grid-gap: 1rem;
     grid-template-columns: 1fr;
+  }
+  header#main-header .navBar h1 {
+    text-align: center;
   }
   header#main-header .navBar .search-form {
     position: relative;
@@ -179,9 +194,8 @@ main#main-content ul li:nth-child(even):hover {
     right: 5px;
   }
 
-  input {
-    width: 90%;
-    margin-bottom: 0.5rem;
+  main#main-content {
+    border-radius: 0;
   }
 }
 

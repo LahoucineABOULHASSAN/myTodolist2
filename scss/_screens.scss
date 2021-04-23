@@ -1,11 +1,24 @@
 //-- VERY SMALL SMARTPHONES --\\
 @include mediaXs {
+  body {
+    overflow: auto;
+  }
+  input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .main-container {
+    width: 100%;
+  }
   header#main-header {
     padding: 0.5rem;
     .navBar {
       width: 100%;
       grid-gap: 1rem;
       grid-template-columns: 1fr;
+      h1 {
+        text-align: center;
+      }
       .search-form {
         position: relative;
         width: 100%;
@@ -22,8 +35,7 @@
       }
     }
   }
-  input {
-    width: 90%;
-    margin-bottom: 0.5rem;
+  main#main-content {
+    border-radius: 0;
   }
 }
