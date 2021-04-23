@@ -1,12 +1,12 @@
 {
   "name": "todo_app",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "simple to do app with html5 and sass plus es6 js",
   "main": "app.js",
   "homepage": "https://LahoucineABOULHASSAN.github.io/todoList_v2",
   "scripts": {
-    "sass": "node-sass -w scss/ -o src/css/ --recursive",
-    "deploy": "gh-pages -d src"
+    "sass": "sass scss:src/css",
+    "watch": "sass --watch scss:src/css"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,6 @@
   "author": "Lahoucine Aboulhassan",
   "license": "MIT",
   "dependencies": {
-    "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0"
+    "sass": "^1.32.8"
   }
 }

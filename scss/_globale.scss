@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 body {
-  background: $light-color;
   font-family: $font;
+  background: $light-color;
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 input:focus {
   outline: none;
@@ -16,8 +22,8 @@ ul {
 }
 //-- HTML CLASSES --\\
 .main-container {
-  max-width: 960px;
   margin: auto;
+  width: 90%;
 }
 .container {
   width: 90%;
@@ -26,6 +32,16 @@ ul {
   color: setColor($dark-color);
   padding: 1rem;
   margin: 3rem auto;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row {
+  flex-direction: row;
+  justify-content: space-between;
 }
 .center {
   text-align: center;
