@@ -50,7 +50,8 @@ ul {
   display: none;
 }
 /**ALERT STYLE**/
-.alert {
+.alert,
+.success {
   @include slowChange;
   opacity: 0;
   background-color: #2eb5d473;

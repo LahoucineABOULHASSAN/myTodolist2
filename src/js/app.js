@@ -1,5 +1,6 @@
 //-------- CATCH DOM ELEMENT --------\\
 const alert = document.querySelector(".alert");
+const success = document.querySelector(".success");
 const itemToSearch = document.querySelector(".item-to-search");
 const itemForm = document.querySelector(".item-form");
 const itemToAdd = document.querySelector(".item-to-add");
@@ -22,8 +23,8 @@ function resetList(event) {
       text: "Are you sure?!",
       icon: "error",
       buttons: true,
-      dangerMode: true
-    }).then(willDelete => {
+      dangerMode: true,
+    }).then((willDelete) => {
       if (willDelete) {
         ul.innerHTML = "";
       }
@@ -32,14 +33,14 @@ function resetList(event) {
   } else {
     alert.textContent = "List Already Empty.";
   }
-  fade();
+  fadeAlert();
 }
 // filter searching
 function filter(event) {
   const text = event.target.value.toLowerCase();
   let itemsList = ul.querySelectorAll("li");
   itemsList = Array.from(itemsList);
-  itemsList.forEach(item => {
+  itemsList.forEach((item) => {
     if (item.innerText.toLowerCase().indexOf(text) != -1) {
       item.classList.remove("hide");
     } else {
@@ -61,6 +62,9 @@ function addItem(event) {
     ul.appendChild(li);
     // set the content of li
     li.innerHTML = `<i class="trash alternate outline icon"></i>${item}`;
+    // empty the input field
+    fadeSuccess();
+    itemToAdd.value = "";
   }
 }
 // remove item from the list
@@ -73,8 +77,8 @@ function dropItem(event) {
         text: str,
         icon: "warning",
         buttons: true,
-        dangerMode: true
-      }).then(willDelete => {
+        dangerMode: true,
+      }).then((willDelete) => {
         if (willDelete) {
           deleteChild(event);
         }
@@ -93,12 +97,22 @@ function alertControl(event) {
 function deleteChild(event) {
   const li = event.target.parentElement;
   ul.removeChild(li);
-  fade();
+  fadeAlert();
 }
 // fadeout alert
-function fade() {
+function fadeAlert() {
+  alert.classList.remove("hide");
   alert.style.opacity = "1";
-  setTimeout(function() {
+  setTimeout(function () {
     alert.style.opacity = "0";
+    alert.classList.add("hide");
+  }, 2000);
+}
+function fadeSuccess() {
+  success.classList.remove("hide");
+  success.style.opacity = "1";
+  setTimeout(function () {
+    success.style.opacity = "0";
+    success.classList.add("hide");
   }, 2000);
 }

@@ -63,7 +63,8 @@ ul {
 }
 
 /**ALERT STYLE**/
-.alert {
+.alert,
+.success {
   transition: all 1s ease-out;
   opacity: 0;
   background-color: #2eb5d473;
