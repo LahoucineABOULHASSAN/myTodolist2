@@ -1,0 +1,24 @@
+// HEADER \\
+header#main-header {
+  background: $primary-color;
+  padding: 1rem 2rem;
+  .navBar {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .search-form {
+      width: 200px;
+      float: right;
+      border: 1px solid $dark-color;
+      border-radius: 20px;
+      background: #fff;
+      input {
+        width: 170px;
+        border: none;
+        background: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

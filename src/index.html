@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ToDoList</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header id="main-header">
+        <nav class="navBar">
+          <h1>ToDo App</h1>
+          <form>
+            <div class="search-form">
+              <input
+                type="text"
+                name="item-to-search"
+                class="item-to-search"
+                placeholder="search items "
+              />
+              <i class="search icon"></i>
+            </div>
+          </form>
+        </nav>
+      </header>
+      <main id="main-content">
+        <div class="alert">Item <strong>Successfly</strong> deleted.</div>
+        <div class="container">
+          <h1>Add what to do</h1>
+          <form class="item-form">
+            <input type="text" name="item-to-add" class="item-to-add" />
+            <input type="submit" value="Create" class="btn-primary" />
+          </form>
+          <div class="check">
+            <label>
+              <i class="toggle on large icon"></i> Alert me before Removing any
+              item.
+            </label>
+            <input type="submit" value="Reset" class="reset btn-primary" />
+          </div>
+          <h1 class="center">List To Do</h1>
+          <ul>
+            <li class="item">
+              <i class="trash alternate outline icon"></i>Todo item 1
+            </li>
+            <li class="item">
+              <i class="trash alternate outline icon"></i>Todo item 2
+            </li>
+            <li class="item">
+              <i class="trash alternate outline icon"></i>Todo item 3
+            </li>
+            <li class="item">
+              <i class="trash alternate outline icon"></i>Todo item 4
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

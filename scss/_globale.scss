@@ -1,0 +1,45 @@
+//-- HTML TAGS --\\
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: $light-color;
+  font-family: $font;
+}
+input:focus {
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+//-- HTML CLASSES --\\
+.main-container {
+  max-width: 960px;
+  margin: auto;
+}
+.container {
+  width: 90%;
+  border-radius: 3px;
+  background: $dark-color;
+  color: setColor($dark-color);
+  padding: 1rem;
+  margin: 3rem auto;
+}
+.center {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+/**ALERT STYLE**/
+.alert {
+  @include slowChange;
+  opacity: 0;
+  background-color: #2eb5d473;
+  color: #000;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+}

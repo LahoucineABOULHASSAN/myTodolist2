@@ -1,0 +1,34 @@
+/*-----------------------------------------------------------------------------------*/
+//  IMPORTS \\
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+/*-----------------------------------------------------------------------------------*/
+//-- VARIABLES --\\
+$primary-color: #ec4d37;
+$secondary-color: #c9c9c9;
+$dark-color: #353535;
+$light-color: #efefef;
+$bg-color: #1d1b1b;
+
+$font: "Abel", sans-serif;
+
+/*-----------------------------------------------------------------------------------*/
+//-- MIXINS --\\
+@mixin slowChange {
+  transition: all 1s ease-out;
+}
+// MEDIA QUERY MIXINS \\
+@mixin mediaXs {
+  @media screen and (max-width: 370px) {
+    @content;
+  }
+}
+/*-----------------------------------------------------------------------------------*/
+//-- FUNCTIONS --\\
+// change the text color depending of it's cover
+@function setColor($bg-color) {
+  @if (lightness($bg-color) > 30) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

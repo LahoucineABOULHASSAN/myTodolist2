@@ -1,0 +1,29 @@
+//-- VERY SMALL SMARTPHONES --\\
+@include mediaXs {
+  header#main-header {
+    padding: 0.5rem;
+    .navBar {
+      width: 100%;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr;
+      .search-form {
+        position: relative;
+        width: 100%;
+        float: none;
+        input {
+          width: 80%;
+          margin: 0;
+        }
+        i {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+    }
+  }
+  input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+}
