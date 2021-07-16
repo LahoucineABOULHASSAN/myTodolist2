@@ -1,24 +1,12 @@
-# dreamland
+# todolist2
 
-This project is a 100% front-end web app build using the HTML5 and SASS.
-It's a single page for login and signing up to some website.
+This project is a 100% front-end web app build using the HTML5 and ES6.
+It's a single page for todo list app.
 The Technologies used on this app are the following:
 -HTML5
--SASS
+-ES6
 -GIT
 -VSCODE
-
-# Installation
-
-To be able to use this app project, you have to make sure you have `nodeJs` installed on your computer,
-to make sure if it is run the command `node --version` in the terminal you use.
-it is required so you can use npm to install the depandencies of this project via this command `npm install`
-
-to compile your sass files run the following command:
-`npm run sass`
-
-to watch the sass files run this command:
-`npm run watch`
 
 # Usage
 
